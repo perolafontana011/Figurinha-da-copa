@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #008000, #FFD700); /* verde e amarelo */
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  width: 180px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 2s ease-out forwards;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInText 2s ease-out forwards;
+  animation-delay: 1.5s;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 40px;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeInArrow 2s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.arrow a {
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.arrow a:hover {
+  transform: translateY(5px);
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInArrow {
+  to {
+    opacity: 1;
+  }
+}
